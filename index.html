@@ -30,6 +30,7 @@
       color: var(--text);
       background-color: var(--bg);
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
     header {
@@ -37,6 +38,7 @@
       padding: 4rem 2rem;
       text-align: center;
       border-bottom: 1px solid #e0e0e0;
+      animation: fadeInDown 1s ease;
     }
 
     header h1 {
@@ -54,6 +56,7 @@
       padding: 4rem 2rem;
       max-width: 960px;
       margin: auto;
+      animation: fadeIn 1.5s ease;
     }
 
     section h2 {
@@ -61,14 +64,6 @@
       margin-bottom: 2rem;
       color: var(--accent);
       text-align: center;
-    }
-
-    .videos iframe {
-      width: 100%;
-      height: 360px;
-      margin-bottom: 2rem;
-      border: none;
-      border-radius: 12px;
     }
 
     .pricing {
@@ -82,6 +77,11 @@
       border: 1px solid #ddd;
       border-radius: 12px;
       padding: 2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -145,6 +145,21 @@
       margin-top: 4rem;
     }
 
+    .videos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+    }
+
+    .videos iframe {
+      width: 320px;
+      height: 180px;
+      border: none;
+      border-radius: 12px;
+    }
+
     footer {
       background: var(--light);
       text-align: center;
@@ -153,6 +168,16 @@
       color: #666;
       border-top: 1px solid #e0e0e0;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -160,14 +185,6 @@
     <h1>GenVids</h1>
     <p>Premium AI-Generated Videos, Customized for Your Brand</p>
   </header>
-
-  <section>
-    <h2>Showcase</h2>
-    <div class="videos">
-      <iframe src="https://www.youtube.com/embed/v05cc6GAqpQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ZLBdaoCCo2E" allowfullscreen></iframe>
-    </div>
-  </section>
 
   <section>
     <h2>Pricing Packages</h2>
@@ -201,6 +218,22 @@
       <textarea name="message" rows="5" placeholder="Tell us about your project or any questions you have..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
+  </section>
+
+  <section class="videos">
+    <h2>Showcase</h2>
+    <iframe src="https://www.youtube.com/embed/z79NfwWhhew" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Le0GmK50eqI" allowfullscreen></iframe>
+  </section>
+
+  <section class="analytics">
+    <h2>Track Performance</h2>
+    <p>Monitor your site's performance using integrated Google Analytics. Understand visitor behavior, page engagement, and popular content directly through your dashboard at <a href="https://analytics.google.com/" target="_blank">analytics.google.com</a>.</p>
+  </section>
+
+  <section class="marketing">
+    <h2>Stay Connected</h2>
+    <p>Build and maintain your audience with email updates. We can help you set up tools like Mailchimp to collect emails and send newsletters. Perfect for keeping followers engaged and informed.</p>
   </section>
 
   <section class="faq">

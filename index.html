@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GenVids – Premium AI Video Creation</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BX9W843WJ3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BX9W843WJ3');
+  </script>
   <style>
     :root {
       --accent: #00bfa6;
@@ -23,7 +30,6 @@
       color: var(--text);
       background-color: var(--bg);
       line-height: 1.7;
-      overflow-x: hidden;
     }
 
     header {
@@ -31,7 +37,6 @@
       padding: 4rem 2rem;
       text-align: center;
       border-bottom: 1px solid #e0e0e0;
-      animation: fadeInDown 1s ease-in-out;
     }
 
     header h1 {
@@ -49,7 +54,6 @@
       padding: 4rem 2rem;
       max-width: 960px;
       margin: auto;
-      animation: fadeInUp 1s ease-in-out;
     }
 
     section h2 {
@@ -59,19 +63,12 @@
       text-align: center;
     }
 
-    .videos {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      align-items: center;
-    }
-
     .videos iframe {
-      width: 80%;
-      height: 400px;
+      width: 100%;
+      height: 360px;
+      margin-bottom: 2rem;
       border: none;
       border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
 
     .pricing {
@@ -85,7 +82,6 @@
       border: 1px solid #ddd;
       border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     .card h3 {
@@ -157,28 +153,6 @@
       color: #666;
       border-top: 1px solid #e0e0e0;
     }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
   </style>
 </head>
 <body>
@@ -186,6 +160,14 @@
     <h1>GenVids</h1>
     <p>Premium AI-Generated Videos, Customized for Your Brand</p>
   </header>
+
+  <section>
+    <h2>Showcase</h2>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/v05cc6GAqpQ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ZLBdaoCCo2E" allowfullscreen></iframe>
+    </div>
+  </section>
 
   <section>
     <h2>Pricing Packages</h2>
@@ -221,22 +203,14 @@
     </form>
   </section>
 
-  <section>
-    <h2>Showcase</h2>
-    <div class="videos">
-      <iframe src="https://youtube.com/shorts/Le0GmK50eqI?feature=share" allowfullscreen></iframe>
-      <iframe src="https://youtube.com/shorts/z79NfwWhhew?feature=share" allowfullscreen></iframe>
-    </div>
-  </section>
-
   <section class="analytics">
     <h2>Track Performance</h2>
-    <p>Want to see how many visitors your website is getting? You can add <strong>Google Analytics</strong> by creating an account at <a href="https://analytics.google.com/" target="_blank">analytics.google.com</a> and adding your tracking ID here. Let me know and I’ll help you install it.</p>
+    <p>This site is connected to Google Analytics, so you can track visits, page views, and how people interact with your content. Just log into your dashboard at <a href="https://analytics.google.com/" target="_blank">analytics.google.com</a> to check your stats.</p>
   </section>
 
   <section class="marketing">
     <h2>Stay Connected</h2>
-    <p>We can set up a simple email marketing system using <strong>Mailchimp</strong> or <strong>ConvertKit</strong> to collect leads and stay in touch with your visitors. Want to add a newsletter signup? Let me know!</p>
+    <p>Want to start an email newsletter for your audience? We can integrate <strong>Mailchimp</strong> or another tool to collect emails and keep your followers updated. Just let us know when you're ready to start!</p>
   </section>
 
   <section class="faq">

@@ -13,10 +13,11 @@
   </script>
   <style>
     :root {
-      --accent: #00bfa6;
-      --text: #1c1c1c;
-      --bg: #ffffff;
-      --light: #f9f9f9;
+      --accent: #c5a47e; /* gold-ish */
+      --background: #0f0f0f;
+      --foreground: #ffffff;
+      --light-bg: #1a1a1a;
+      --muted: #999;
     }
 
     * {
@@ -27,17 +28,16 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      color: var(--text);
-      background-color: var(--bg);
+      color: var(--foreground);
+      background-color: var(--background);
       line-height: 1.7;
       overflow-x: hidden;
     }
 
     header {
-      background: var(--light);
+      background: var(--light-bg);
       padding: 4rem 2rem;
       text-align: center;
-      border-bottom: 1px solid #e0e0e0;
       animation: fadeInDown 1s ease;
     }
 
@@ -45,11 +45,12 @@
       font-size: 3rem;
       color: var(--accent);
       margin-bottom: 1rem;
+      letter-spacing: 1px;
     }
 
     header p {
       font-size: 1.2rem;
-      color: #555;
+      color: var(--muted);
     }
 
     section {
@@ -64,6 +65,7 @@
       margin-bottom: 2rem;
       color: var(--accent);
       text-align: center;
+      letter-spacing: 1px;
     }
 
     .pricing {
@@ -73,8 +75,8 @@
     }
 
     .card {
-      background: var(--light);
-      border: 1px solid #ddd;
+      background: var(--light-bg);
+      border: 1px solid #333;
       border-radius: 12px;
       padding: 2rem;
       transition: transform 0.3s ease;
@@ -93,7 +95,7 @@
       margin-top: 1rem;
       display: inline-block;
       background: var(--accent);
-      color: white;
+      color: var(--background);
       padding: 0.8rem 1.5rem;
       border-radius: 8px;
       text-decoration: none;
@@ -102,16 +104,16 @@
     }
 
     .order-btn:hover {
-      background: #009e8c;
+      background: #af8c66;
     }
 
     .payment-note {
       margin-top: 2rem;
-      background: #e8fffb;
+      background: #191919;
       padding: 1rem 1.5rem;
       border-left: 4px solid var(--accent);
       border-radius: 8px;
-      color: #333;
+      color: var(--muted);
       font-size: 1rem;
     }
 
@@ -125,12 +127,14 @@
       padding: 1rem;
       border-radius: 8px;
       font-size: 1rem;
-      border: 1px solid #ccc;
+      border: 1px solid #444;
+      background: var(--light-bg);
+      color: var(--foreground);
     }
 
     button {
       background: var(--accent);
-      color: white;
+      color: var(--background);
       font-weight: bold;
       cursor: pointer;
       transition: background 0.3s;
@@ -138,7 +142,7 @@
     }
 
     button:hover {
-      background: #009e8c;
+      background: #af8c66;
     }
 
     .analytics, .marketing, .faq {
@@ -150,23 +154,24 @@
       justify-content: center;
       gap: 2rem;
       flex-wrap: wrap;
-      margin-top: 4rem;
+      margin-top: 2rem;
     }
 
     .videos iframe {
-      width: 320px;
-      height: 180px;
+      width: 280px;
+      height: 158px;
       border: none;
       border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     footer {
-      background: var(--light);
+      background: var(--light-bg);
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #e0e0e0;
+      color: var(--muted);
+      border-top: 1px solid #333;
     }
 
     @keyframes fadeIn {
@@ -183,30 +188,30 @@
 <body>
   <header>
     <h1>GenVids</h1>
-    <p>Premium AI-Generated Videos, Customized for Your Brand</p>
+    <p>AI Video Creation — Elegant. Intelligent. Unforgettable.</p>
   </header>
 
   <section>
-    <h2>Pricing Packages</h2>
+    <h2>Our Signature Packages</h2>
     <div class="pricing">
       <div class="card">
         <h3>Starter – $50</h3>
-        <p>Includes a 60-second AI video with basic editing, script based on your notes, and an AI avatar narrator.</p>
+        <p>1-minute AI video, minimal editing, and voiceover. Perfect for getting started.</p>
         <a href="https://paypal.me/placeholder/50" class="order-btn" target="_blank">Order Starter</a>
       </div>
       <div class="card">
         <h3>Pro – $100</h3>
-        <p>Up to 2 minutes, enhanced branding, script guidance, professional voiceover, and custom background music.</p>
+        <p>Up to 2 minutes, better visuals, brand tone, music, and script support.</p>
         <a href="https://paypal.me/placeholder/100" class="order-btn" target="_blank">Order Pro</a>
       </div>
       <div class="card">
         <h3>Premium – $200</h3>
-        <p>2–3 minutes, full creative consultation, advanced motion graphics, multi-scene structure, voiceover, and full editing suite.</p>
+        <p>Full creative direction, custom visuals, advanced graphics, and AI voiceovers.</p>
         <a href="https://paypal.me/placeholder/200" class="order-btn" target="_blank">Order Premium</a>
       </div>
     </div>
     <div class="payment-note">
-      <strong>Note:</strong> After completing your payment, please fill out the contact form below so we can start your project.
+      <strong>After payment:</strong> please fill out the contact form below to start your custom order.
     </div>
   </section>
 
@@ -215,7 +220,7 @@
     <form action="https://formspree.io/f/myzeakob" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="email" name="email" placeholder="Email Address" required />
-      <textarea name="message" rows="5" placeholder="Tell us about your project or any questions you have..." required></textarea>
+      <textarea name="message" rows="5" placeholder="Tell us about your project or vision..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
@@ -226,15 +231,25 @@
     <iframe src="https://www.youtube.com/embed/Le0GmK50eqI" allowfullscreen></iframe>
   </section>
 
+  <section class="analytics">
+    <h2>Track Performance</h2>
+    <p>We use Google Analytics to track real-time performance insights for you — including views, time spent, and top content. Visit <a href="https://analytics.google.com/" target="_blank">analytics.google.com</a>.</p>
+  </section>
+
+  <section class="marketing">
+    <h2>Stay Connected</h2>
+    <p>Maintain your following through professional email tools like Mailchimp. We’ll help you automate newsletters and stay in touch with your growing audience.</p>
+  </section>
+
   <section class="faq">
-    <h2>FAQ</h2>
-    <p><strong>Q:</strong> How long does it take to deliver a video?<br /><strong>A:</strong> Most videos are delivered within 3–5 business days depending on complexity.</p>
-    <p><strong>Q:</strong> Do you offer revisions?<br /><strong>A:</strong> Yes! Every package comes with at least one revision.</p>
-    <p><strong>Q:</strong> Can I use my own script or images?<br /><strong>A:</strong> Absolutely! We’ll work with any content you provide.</p>
+    <h2>FAQs</h2>
+    <p><strong>How long does it take?</strong><br />3–5 business days depending on the project.</p>
+    <p><strong>Are revisions included?</strong><br />Yes. Each package includes one revision.</p>
+    <p><strong>Can I submit a script?</strong><br />Yes, or we’ll assist you in refining one.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 GenVids. All rights reserved.</p>
+    <p>&copy; 2025 GenVids. Designed with intention. Delivered with excellence.</p>
   </footer>
 </body>
 </html>
